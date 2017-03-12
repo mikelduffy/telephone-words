@@ -1,0 +1,24 @@
+{
+  "name": "telephone-words",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikelduffy/telephone-words.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikelduffy/telephone-words/issues"
+  },
+  "homepage": "https://github.com/mikelduffy/telephone-words#readme",
+  "dependencies": {
+    "check-word": "^1.1.0",
+    "koa": "^2.1.0"
+  }
+}
