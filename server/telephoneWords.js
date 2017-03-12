@@ -3,6 +3,8 @@ const words = checkWord('en');
 
 module.exports = (digitArr, checkEnglish) => {
   const telephoneKeyMap = {
+    0: ['0'],
+    1: ['1'],
     2: ['a', 'b', 'c'],
     3: ['d', 'e', 'f'],
     4: ['g', 'h', 'i'],
