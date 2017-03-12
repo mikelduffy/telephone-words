@@ -14,5 +14,5 @@
 
 ## To get started
 1. Clone this repo and cd into the folder.
-2. Start the server with ```npm start``` in the main folder. API route is listening on localhost:4000.
-3. Start serving the frontend with ```cd ./client && npm start```. Client is viewable at localhost:3000.
+2. Start the server with ```npm install && npm start``` in the main folder. API route is listening on localhost:4000.
+3. Start serving the frontend with ```cd ./client && npm install && npm start```. Client is viewable at localhost:3000.
