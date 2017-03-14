@@ -8,11 +8,20 @@ import './App.css';
 class App extends Component {
   state = {
     'userNumber': '',
+    'english': false,
     'results': []
   }
 
+  fetchResults(number, english){
+    fetch(`http://localhost:4000/telephonewords/${number}/${english}`)
+      .then((response) => response.text())
+      .then(text => this.setState({'results': text.split(', ')}));
+  }
+
   handleUserInput(e) {
-    this.setState({'userNumber': this.state.userNumber + e.target.value});
+    this.setState({'userNumber': this.state.userNumber + e.target.value}, () => {
+      this.fetchResults(this.state.userNumber, this.state.english);
+    });
   }
 
   handleClearUserInput(){
