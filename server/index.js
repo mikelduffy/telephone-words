@@ -1,8 +1,11 @@
 const Koa = require('koa');
 const router = require('koa-route');
+const cors = require('koa-cors');
 const telephoneWords = require('./telephoneWords');
 
 const app = new Koa();
+
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 // Set server response time
 app.use(async function (ctx, next) {
