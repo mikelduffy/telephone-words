@@ -2,15 +2,15 @@
 
 ## Goals
 + Create an API with a route that takes an array of numbers and returns a list of words.
-- Build a front-end that takes user input and displays the list of words returned by the backend.
++ Build a front-end that takes user input and displays the list of words returned by the backend.
 
 ### Bonus Points
 + Filter wordlist for English words.
-- UI for the front-end.
++ UI for the front-end.
 
 ## Technologies Used
 - Backend: Koa, Node, check-word
-- Frontend: React, 
+- Frontend: React, React-bootstrap
 
 ## To get started
 1. Clone this repo and cd into the folder.
