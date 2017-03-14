@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, Button } from 'react-bootstrap';
+import { FormControl, Checkbox } from 'react-bootstrap';
 import UserButton from './UserButton';
 
 const UserInput = props => {
@@ -18,7 +18,7 @@ const UserInput = props => {
         </FormControl>
       </form>
       {buttonRows.map((buttonRow, i) => (
-        <div className='button-row'>
+        <div className='button-row' key={i}>
           {buttonRow.map((button) => (
               <UserButton
                 key={button}
@@ -38,6 +38,12 @@ const UserInput = props => {
           disabled={false}
         >Clear</UserButton>
       </div>
+      <div>
+        <h3 className='checkbox-container'>
+          <Checkbox onChange={props.onEnglishToggle} value={props.english} inline></Checkbox> &nbsp; Filter for English words?
+        </h3>
+      </div>
+      
       
     </div>
   );

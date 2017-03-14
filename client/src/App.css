@@ -9,14 +9,16 @@
   justify-content: center;
 }
 
+.results-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .result {
   margin: 4px;
 }
-
-/*.big-checkbox {
-  width: 30px; 
-  height: 30px;
-}*/
 
 input[type="checkbox"] {
   transform:scale(2, 2);

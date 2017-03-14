@@ -8,7 +8,7 @@ import './App.css';
 class App extends Component {
   state = {
     'userNumber': '',
-    'english': false,
+    'english': 'off',
     'results': []
   }
 
@@ -20,7 +20,7 @@ class App extends Component {
 
   handleUserInput(e) {
     this.setState({'userNumber': this.state.userNumber + e.target.value}, () => {
-      this.fetchResults(this.state.userNumber, this.state.english);
+      this.fetchResults(this.state.userNumber, this.state.english === 'on' ? true : false);
     });
   }
 
@@ -28,6 +28,14 @@ class App extends Component {
     this.setState({
       'userNumber': '',
       'results': []
+    });
+  }
+
+  handleEnglishToggle(e) {
+    this.setState({
+      'english': e.target.value === 'on' ? 'off' : 'on'
+    }, () => {
+      this.fetchResults(this.state.userNumber, this.state.english === 'on' ? true : false);
     });
   }
 
@@ -45,6 +53,8 @@ class App extends Component {
               userNumber={this.state.userNumber}
               onUserInput={this.handleUserInput.bind(this)}
               onClearUserInput={this.handleClearUserInput.bind(this)}
+              onEnglishToggle={this.handleEnglishToggle.bind(this)}
+              english={this.state.english}
             ></UserInput>
           </Col>
           <Col xs={6}>
